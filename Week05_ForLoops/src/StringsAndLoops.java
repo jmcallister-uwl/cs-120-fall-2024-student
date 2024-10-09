@@ -10,8 +10,16 @@ public class StringsAndLoops {
 		 * get a count of how many of a certain character there is.
 		 * */
 		
+		char target = 'l';
+		int count = 0;
 		
-//		System.out.println("Total " + target + " in " + phrase + " => " + count);
+		for(int i = phrase.length() / 2; i >= 0; i--) {
+			if(phrase.charAt(i) == target) {
+				count++;
+			}
+		}
+		
+		System.out.println("Total " + target + " in first half of " + phrase + " => " + count);
 			
 			
 	}

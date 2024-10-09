@@ -7,7 +7,7 @@ public class Review {
 		int z = 4;
 
 		if (x < 10) {
-x
+
 			if (x < 5) {
 				y += x;
 				System.out.println("abc: " + y);
