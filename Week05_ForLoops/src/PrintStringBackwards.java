@@ -2,7 +2,7 @@
 public class PrintStringBackwards {
 
 	public static void main(String[] args) {
-		String phrase = "Hello World";
+		String phrase = "UWL";
 		
 
 		for(int i = phrase.length() - 1; i >= 0; i--) {
