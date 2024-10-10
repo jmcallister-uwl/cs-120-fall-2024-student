@@ -4,6 +4,7 @@ public class InefficientWithoutArray {
 
 	public static void main(String[] args) {
 		double quizOne, quizTwo, quizThree, quizFour;
+		
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter 4 quiz scores:");
 

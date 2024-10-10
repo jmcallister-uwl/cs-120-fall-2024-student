@@ -3,7 +3,8 @@ import java.util.Scanner;
 public class EfficientWithArray {
 
 	public static void main(String[] args) {
-		double[] quizScores = new double[4];
+		double[] quizScores = new double[40];
+		
 		Scanner input = new Scanner(System.in);
 
 		for(int i = 0; i < quizScores.length; i++) {
