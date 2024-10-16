@@ -8,7 +8,18 @@ public class Demo {
 		Person personFour = new Person("Alice");
 		Person personFive = new Person("Tyler");
 		Person personSix = new Person("Hunter");
-
+		
+		Person[] people = {personOne, personTwo, personThree, personFour};
+		
+		Car carOne = new Car("Dorthy", "Ford", "Explorer", 2024, 2);
+		
+		int result = carOne.addPassengers(people);
+		
+		System.out.println("result: " + result);
+		
+		carOne.printPassengers();
+		
+		
 	}
 
 }

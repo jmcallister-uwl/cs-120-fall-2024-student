@@ -82,6 +82,15 @@ public class Car {
 		return peopleAdded;
 	}
 	
-	
+	public void printPassengers() {
+		System.out.println(this.name + " passengers: ");
+		for(int i = 0; i < this.passengers.length; i++) {
+			if(this.passengers[i] == null) {
+				break;
+			}
+			
+			System.out.println(this.passengers[i].name);
+		}
+	}
 
 }
