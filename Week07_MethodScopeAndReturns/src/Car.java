@@ -24,6 +24,7 @@ public class Car {
 	}
 	
 	public void decelerate(int amount) {
+		// How could we improve this method?
 		this.speed -= amount;
 	}
 	
@@ -36,6 +37,8 @@ public class Car {
 	}
 	
 	public void reverse() {
+		// Using a negative number for the speed to represent
+		// going backwards
 		this.speed = -4;
 		this.beep();
 	}
