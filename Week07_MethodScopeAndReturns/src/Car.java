@@ -6,6 +6,7 @@ public class Car {
 	public int year;
 	public int numSeats;
 	public int speed; // Notice not initializing in constructor
+	public Person[] passengers;
 	
 	public Car(String name, String make, String model, int year, int numSeats) {
 		this.name = name;
@@ -13,6 +14,8 @@ public class Car {
 		this.model = model;
 		this.year = year;
 		this.numSeats = numSeats;
+		this.passengers = new Person[numSeats];
+//		int[] numbers = new int[4];
 	}	
 
 	public void drive(int speed) {		
@@ -32,9 +35,7 @@ public class Car {
 		this.speed = 0;
 	}
 	
-	public String beep() {
-		return "Beep!";
-	}
+	
 	
 	public void reverse() {
 		// Using a negative number for the speed to represent
@@ -43,11 +44,24 @@ public class Car {
 		this.beep();
 	}
 	
-//	public boolean addPassenger(Person passenger) {
-//		boolean wasAdded = false;
-//		
-//		return wasAdded;
-//	}
+	public void beep() {
+		System.out.println("Beep!");
+	}
+	
+	public boolean addPassenger(Person passenger) {
+		boolean wasAdded = false;
+		for(int i = 0; i < this.passengers.length; i++) {
+			if(this.passengers[i] == null) {
+				// open seat
+				this.passengers[i] = passenger;
+				wasAdded = true;
+				
+				break;
+			}
+		}
+		
+		return wasAdded;
+	}
 
 	
 //	public int addPassengers(Person[] people) {
