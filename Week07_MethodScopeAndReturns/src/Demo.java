@@ -8,9 +8,10 @@ public class Demo {
 		Person personFour = new Person("Alice");
 		Person personFive = new Person("Tyler");
 		Person personSix = new Person("Hunter");
-		
+//		
 		Car carOne = new Car("Dorthy", "Ford", "Explorer", 2024, 4);
-		System.out.println( carOne.passengers.length );
+		carOne.addPassenger(personOne);
+		carOne.printPassengers();
 
 	}
 
