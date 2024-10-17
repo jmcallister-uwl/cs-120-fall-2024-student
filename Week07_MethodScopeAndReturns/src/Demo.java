@@ -11,6 +11,7 @@ public class Demo {
 //		
 		Car carOne = new Car("Dorthy", "Ford", "Explorer", 2024, 4);
 		carOne.addPassenger(personOne);
+		carOne.addPassenger(personTwo);
 		carOne.printPassengers();
 
 	}

@@ -6,7 +6,7 @@ public class Car {
 	public int year;
 	public int numSeats;
 	public int speed; // Notice not initializing in constructor
-	public Person[] passengers; 
+	public Person[] passengers;
 
 	public Car(String name, String make, String model, int year, int numSeats) {
 		this.name = name;
@@ -49,14 +49,14 @@ public class Car {
 	public boolean addPassenger(Person passenger) {
 		boolean wasAdded = false;
 		for(int i = 0; i < this.passengers.length; i++) {
-			if(this.passengers[i]== null) {
+			if(this.passengers[i] == null) {
 				// empty seat
 				this.passengers[i] = passenger;
 				wasAdded = true;
 				
 				break;
 			}
-		}
+		}		
 				
 		return wasAdded;
 	}
