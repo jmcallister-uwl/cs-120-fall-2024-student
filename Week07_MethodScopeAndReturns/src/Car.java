@@ -15,7 +15,7 @@ public class Car {
 		this.year = year;
 		this.numSeats = numSeats;
 		this.passengers = new Person[numSeats];
-		// int[] x = new int[3];
+//		 int[] x = new int[3];
 	}
 
 	public void drive(int speed) {
