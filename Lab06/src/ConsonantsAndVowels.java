@@ -4,17 +4,17 @@ public class ConsonantsAndVowels {
         int vowels = 0, consonants = 0;
 
         for (int i = 0; i < str.length(); i++) {
-            char character = Character.toLowerCase(str.charAt(i));
+            char curCharacter = Character.toLowerCase(str.charAt(i));
             
-            if (character == 'a' || 
-        		character == 'e' || 
-        		character == 'i' || 
-        		character == 'o' || 
-        		character == 'u') 
+            if (curCharacter == 'a' || 
+            	curCharacter == 'e' || 
+            	curCharacter == 'i' || 
+            	curCharacter == 'o' || 
+            	curCharacter == 'u') 
             {            	
                 vowels++;
                 
-            } else if (character >= 'a' && character <= 'z') {
+            } else if (curCharacter >= 'a' && curCharacter <= 'z') {
             	/*
             	 * Characters are just integers under the hood. Each
             	 * character has an ASCII code associated with it so that
@@ -23,7 +23,12 @@ public class ConsonantsAndVowels {
             	 * Because of this fact, we can perform integer operations on
             	 * characters. If you look at an ASCII table, you'll see that
             	 * the range check above will restrict us to only character codes
-            	 * which represent letters.
+            	 * which represent letters. 
+            	 * 
+            	 * We only need to worry about lower case
+            	 * letters because of our call to Character.toLowerCase(str.charAt(i))
+            	 * which will give us the lower case representation of the character
+            	 * that we are currently looking at.
             	 * 
             	 * */
                 consonants++;                
