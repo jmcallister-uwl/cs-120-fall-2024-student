@@ -46,12 +46,12 @@ public class Car {
 		System.out.println("Beep!");
 	}
 
-	public boolean addPassenger(Person passenger) {
+	public boolean addPassenger(Person person) {
 		boolean wasAdded = false;
 		for(int i = 0; i < this.passengers.length; i++) {
 			if(this.passengers[i] == null) {
 				// empty seat
-				this.passengers[i] = passenger;
+				this.passengers[i] = person;
 				wasAdded = true;
 				
 				break;
@@ -60,9 +60,15 @@ public class Car {
 				
 		return wasAdded;
 	}
-
+	
+	
+	/**
+	 * 
+	 * @param people An array of Person objects to add to this Car
+	 * @return The number of passengers added.
+	 */
 //	public int addPassengers(Person[] people) {
-//						
+//		
 //		return 0;
 //	}
 
