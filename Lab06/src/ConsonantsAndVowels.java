@@ -25,8 +25,8 @@ public class ConsonantsAndVowels {
             	 * the range check above will restrict us to only character codes
             	 * which represent letters. 
             	 * 
-            	 * We only need to worry about lower case
-            	 * letters because of our call to Character.toLowerCase(str.charAt(i))
+            	 * We only need to worry about lower case letters
+            	 * because of our call to Character.toLowerCase(str.charAt(i))
             	 * which will give us the lower case representation of the character
             	 * that we are currently looking at.
             	 * 
