@@ -48,52 +48,53 @@ public class Car {
 
 	public boolean addPassenger(Person person) {
 		boolean wasAdded = false;
-		for(int i = 0; i < this.passengers.length; i++) {
-			if(this.passengers[i] == null) {
+		for (int i = 0; i < this.passengers.length; i++) {
+			if (this.passengers[i] == null) {
 				// empty seat
 				this.passengers[i] = person;
 				wasAdded = true;
-				
+
 				break;
 			}
-		}		
-				
+		}
+
 		return wasAdded;
 	}
-	
-	
+
 	/**
 	 * 
 	 * @param people An array of Person objects to add to this Car
 	 * @return The number of passengers added.
 	 */
-//	public int addPassengers(Person[] people) {
-//		
-//	}
+	public int addPassengers(Person[] people) {
+		int numAdded = 0;
+		for(int i= 0; i < people.length; i++) {
+			if(this.addPassenger(people[i])) {
+				numAdded++;
+			}
+			
+		}
+		
+		return numAdded;
+	}
 
 	public void printPassengers() {
 		System.out.println(this.name + " passengers: ");
+		
 		if(this.passengers[0] == null) {
-			System.out.println(this.name + " has no passengers");
-			
+			System.out.println(this.name + " has no passengers.");
 			return;
 		}
 		
-		for(int i = 0; i < this.passengers.length; i++) {
-			if(this.passengers[i] != null) {
-				Person curPassenger = this.passengers[i];
-				System.out.println(curPassenger.name);
-			}			
+		// go through array & print out every person's name in there
+		for (int i = 0; i < this.passengers.length; i++) {			
+			if(this.passengers[i] == null) {
+				break;
+			}
+			
+//			Person curPassenger = this.passengers[i];
+			System.out.println(this.passengers[i].name);
 		}
-		
 	}
 
 }
-
-
-
-
-
-
-
-

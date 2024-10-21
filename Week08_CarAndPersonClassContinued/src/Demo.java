@@ -11,11 +11,16 @@ public class Demo {
 		Person personSeven = new Person("Tony");
 		Person personEight = new Person("Jack");
 //		
-		Car carOne = new Car("Bucky", "Ford", "Explorer", 2024, 4);
+		Car carOne = new Car("Dorthy", "Ford", "Explorer", 2024, 4);
 		carOne.addPassenger(personOne);
 		carOne.addPassenger(personTwo);
 		
+		Person[] people = {personThree, personFour, personFive, personSix, personSeven, personEight};
+		int numAdded = carOne.addPassengers(people);
+		System.out.println("numAdded: " + numAdded);
+		
 		carOne.printPassengers();
+		
 
 	}
 
