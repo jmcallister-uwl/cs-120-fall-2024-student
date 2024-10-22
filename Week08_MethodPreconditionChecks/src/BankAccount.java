@@ -3,7 +3,6 @@ public class BankAccount {
 	public String name;
 	public double balance;
 	
-	
 	public BankAccount(String name, double balance) {
 		this.name = name;
 		this.balance = balance;
@@ -27,6 +26,7 @@ public class BankAccount {
 	// There is a major problem here. Can you see what it is?
 	public double withdraw(double amount) {
 		double withdrawnAmt = 0;
+		
 		if(this.balance >= amount) {
 			// Can withdraw
 			this.balance -= amount;
