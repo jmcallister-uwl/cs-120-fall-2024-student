@@ -12,12 +12,16 @@ public class Airplane {
         this.model = model;
         this.capacity = capacity;
         Airplane.numAirplanesCreated++;
-//        this.fuelLevel = 100.0;
+//        this.fuelLevel = 100;
 //        this.inFlight = false; 
     }
     
     public static int getNumAirplanesCreated() {
     	return Airplane.numAirplanesCreated;
+    }
+    
+    private static void setNumAirplanesCreated(int num) {
+    	Airplane.numAirplanesCreated = num;
     }
 
     public String getModel() {
