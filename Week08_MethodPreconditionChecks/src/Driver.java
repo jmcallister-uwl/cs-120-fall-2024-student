@@ -6,7 +6,7 @@ public class Driver {
 		Scanner input = new Scanner(System.in);
 		
 		BankAccount bobAccount = new BankAccount("Bob Account", 100);
-		BankAccount SallyAccount = new BankAccount("Sally Account", 200);
+//		BankAccount SallyAccount = new BankAccount("Sally Account", 200);
 		
 		System.out.println("Current balance in " + bobAccount.name + ": " + bobAccount.balance);
 		System.out.println("Enter the amount would you like to withdraw from " + bobAccount.name + ":");

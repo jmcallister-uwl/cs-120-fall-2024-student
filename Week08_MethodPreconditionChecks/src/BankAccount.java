@@ -8,6 +8,7 @@ public class BankAccount {
 		this.balance = balance;
 	}
 	
+	// There is a major problem here. Can you see what it is?
 	public boolean transfer(BankAccount otherAccount, double amount) {
 		boolean wasSuccessful = false;
 		

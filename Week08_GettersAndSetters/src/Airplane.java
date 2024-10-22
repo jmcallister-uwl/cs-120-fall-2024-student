@@ -1,6 +1,8 @@
 public class Airplane {
-
-    // Instance variables (attributes)
+	// Think about why this would be important to be
+	// private and also only have a getter method.
+	private static int numAirplanesCreated = 0;
+	
     private String model;
     private int capacity;
     private double fuelLevel = 100;
@@ -9,8 +11,13 @@ public class Airplane {
     public Airplane(String model, int capacity) {
         this.model = model;
         this.capacity = capacity;
+        Airplane.numAirplanesCreated++;
 //        this.fuelLevel = 100.0;
 //        this.inFlight = false; 
+    }
+    
+    public static int getNumAirplanesCreated() {
+    	return Airplane.numAirplanesCreated;
     }
 
     public String getModel() {
@@ -36,8 +43,10 @@ public class Airplane {
     public void setFuelLevel(double fuelLevel) {
         if(fuelLevel >= 0 && fuelLevel <= 100) {
             this.fuelLevel = fuelLevel;
+            
         } else {
             System.out.println("Fuel level must be between 0 and 100.");
+            
         }
     }
 
@@ -53,10 +62,13 @@ public class Airplane {
         if (fuelLevel > 0 && !inFlight) {
             inFlight = true;
             System.out.println("The airplane is taking off!");
+            
         } else if (inFlight) {
             System.out.println("The airplane is already in flight.");
+            
         } else {
             System.out.println("Not enough fuel to take off.");
+            
         }
     }
 
@@ -64,13 +76,16 @@ public class Airplane {
         if (inFlight) {
             inFlight = false;
             System.out.println("The airplane is landing.");
+            
         } else {
             System.out.println("The airplane is already on the ground.");
+            
         }
     }
 
     public void refuel(double fuelAmount) {
         this.setFuelLevel(fuelLevel + fuelAmount);
         System.out.println("The airplane has been refueled. Current fuel level: " + fuelLevel + "%.");
+        
     }
 }
