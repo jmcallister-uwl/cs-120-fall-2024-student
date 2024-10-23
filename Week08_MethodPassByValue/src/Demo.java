@@ -2,6 +2,8 @@
 public class Demo {
 
 	public static void main(String[] args) {
+		
+		
 		System.out.println("\n========= Example 1: Pass-by-value with primitives ====================\n");
 		
 		int firstHeight = 12;
@@ -37,26 +39,26 @@ public class Demo {
 		
 		System.out.println("\n==================================================================");
 		
-		
+//		
 		System.out.println("\n========= Example 3: Method scope and local variables ====================\n");
 		
 		String matOne = "copper";
 		System.out.println("matOne: " + matOne);
-	
+//	
 		System.out.println("\n--------------------------------------------------");
 		System.out.println("ChairChanger.materialTest(matOne);");
 		ChairChanger.materialTest(matOne);
 		System.out.println("--------------------------------------------------\n");		
-		
-		System.out.println("matOne after materialTest: " + matOne);
-		
-		System.out.println("\n==================================================================");
 //		
+		System.out.println("matOne after materialTest: " + matOne);
+//		
+		System.out.println("\n==================================================================");
+////		
 		System.out.println("\n========= Example 4: Reference comparison ====================\n");
 
 		Chair testChair = officeChair;
 		System.out.println("Do 'officeChair' and 'testChair' refer to the same object?... \n(officeChair == testChair) => " + (officeChair == testChair));
-		
+//		
 		System.out.println("\nofficeChair material: " + officeChair.material);
 		System.out.println("testChair material: " + testChair.material);
 		

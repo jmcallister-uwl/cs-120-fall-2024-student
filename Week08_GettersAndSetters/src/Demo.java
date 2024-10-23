@@ -5,7 +5,7 @@ public class Demo {
 		Airplane planeOne = new Airplane("Boeing", 100);
 		Airplane planeTwo = new Airplane("Delta", 100);
 		
-				
+		planeOne.getModel();
 		System.out.println("Total Airplane instances created: " + Airplane.getNumAirplanesCreated());
 
 	}
