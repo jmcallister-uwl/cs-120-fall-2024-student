@@ -2,9 +2,7 @@
 public class Demo {
 
 	public static void main(String[] args) {
-		
-		
-		System.out.println("\n========= Example 1: Pass-by-value with primitives ====================\n");
+System.out.println("\n========= Example 1: Pass-by-value with primitives ====================\n");
 		
 		int firstHeight = 12;
 		int secondHeight = 2;
@@ -13,8 +11,8 @@ public class Demo {
 		System.out.println("secondHeight: " + secondHeight);
 		
 		System.out.println("\n--------------------------------------------------");
-		System.out.println("int result = ChairChanger.addMeasurements(firstHeight, secondHeight);");
-		int result = ChairChanger.addMeasurements(firstHeight, secondHeight);
+		System.out.println("int result = HouseChanger.addMeasurements(firstHeight, secondHeight);");
+		int result = HouseChanger.addMeasurements(firstHeight, secondHeight);
 		System.out.println("--------------------------------------------------\n");
 		
 		
@@ -26,50 +24,58 @@ public class Demo {
 		
 		System.out.println("\n========= Example 2: Pass-by-value with object references ====================\n");
 		
-		Chair officeChair = new Chair("metal", "orange", 12);
+		House houseOne = new House("Root Note", "green", 2);
 		
-		System.out.println("Original material of officeChair: " + officeChair.material);
+		System.out.println("Color of 'houseOne': " + houseOne.color);
 		
 		System.out.println("\n--------------------------------------------------");
-		System.out.println("ChairChanger.changeMaterial(officeChair, \"wood\");");
-		ChairChanger.changeMaterial(officeChair, "wood");
+		System.out.println("HouseChanger.paintHouse(houseOne, \"red\");");
+		HouseChanger.paintHouse(houseOne, "red");
 		System.out.println("--------------------------------------------------\n");
 		
-		System.out.println("Material of officeChair after changeMaterial: " + officeChair.material);	
+		System.out.println("Color of 'houseOne' after paintHouse(): " + houseOne.color);	
 		
 		System.out.println("\n==================================================================");
 		
 //		
 		System.out.println("\n========= Example 3: Method scope and local variables ====================\n");
 		
-		String matOne = "copper";
-		System.out.println("matOne: " + matOne);
-//	
+		String materialOne = "wood";
+		System.out.println("materialOne: " + materialOne);
+	
 		System.out.println("\n--------------------------------------------------");
-		System.out.println("ChairChanger.materialTest(matOne);");
-		ChairChanger.materialTest(matOne);
+		System.out.println("HouseChanger.materialTest(materialOne);");
+		HouseChanger.materialTest(materialOne);
 		System.out.println("--------------------------------------------------\n");		
-//		
-		System.out.println("matOne after materialTest: " + matOne);
-//		
+		
+		System.out.println("materialOne after materialTest: " + materialOne);
+		
 		System.out.println("\n==================================================================");
-////		
+		
 		System.out.println("\n========= Example 4: Reference comparison ====================\n");
 
-		Chair testChair = officeChair;
-		System.out.println("Do 'officeChair' and 'testChair' refer to the same object?... \n(officeChair == testChair) => " + (officeChair == testChair));
+		House houseTwo = houseOne;
+		System.out.println("Do 'houseOne' and 'houseTwo' refer to the same object?... \n(houseOne == houseTwo) => " + (houseOne == houseTwo));
+		
+		System.out.println("\n'houseOne' color: " + houseOne.color);
+		System.out.println("'houseTwo' color: " + houseTwo.color);
+		
+//		System.out.println("Every property will be the same for the two variables:");
+//		System.out.println("\n'houseOne' name: " + houseOne.name);
+//		System.out.println("'houseTwo' name: " + houseTwo.name);
 //		
-		System.out.println("\nofficeChair material: " + officeChair.material);
-		System.out.println("testChair material: " + testChair.material);
+//		System.out.println("\n'houseOne' numDoors: " + houseOne.numDoors);
+//		System.out.println("'houseTwo' numDoors: " + houseTwo.numDoors);
 		
 		System.out.println("\n----------------------------------------------------");
-		System.out.println("ChairChanger.changeMaterial(officeChair, \"bronze\");");
-		ChairChanger.changeMaterial(officeChair, "bronze");
+		System.out.println("HouseChanger.paintHouse(houseOne, \"blue\");");
+		HouseChanger.paintHouse(houseOne, "blue");
 		System.out.println("----------------------------------------------------\n");
-		System.out.println("'officeChair' material AFTER changeMaterial(): " + officeChair.material);
-		System.out.println("'testChair' material: AFTER changeMaterial(): " + testChair.material);
+		System.out.println("'houseOne' color AFTER paintHouse(): " + houseOne.color);
+		System.out.println("'houseTwo' color: AFTER paintHouse(): " + houseTwo.color);
 		
 		System.out.println("\n==================================================================");
+
 	}
 
 }
