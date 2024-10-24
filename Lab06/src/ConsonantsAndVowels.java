@@ -1,6 +1,6 @@
 public class ConsonantsAndVowels {
     public static void main(String[] args) {
-        String str = "Hello, world!";
+        String str = "apple!!!";
         int vowels = 0, consonants = 0;
 
         for (int i = 0; i < str.length(); i++) {
