@@ -15,6 +15,7 @@ public class ElaborateCoffee {
 		if (coffeeBase.equalsIgnoreCase("latte")) {
 			System.out.println("What kind of milk would you like? (Whole, Skim, Almond):");
 			milk = input.nextLine();
+
 		}
 
 		System.out.println("What size would you like? (Small, Medium, Large):");

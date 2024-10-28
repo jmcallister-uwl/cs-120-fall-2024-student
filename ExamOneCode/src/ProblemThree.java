@@ -13,7 +13,7 @@ public class ProblemThree {
 				System.out.println("abc: " + y);
 
 			} else {
-				y = x / y;
+				y = x / y; // y = 20 / 4 = 5 
 				System.out.println("def: " + y);
 
 			}
@@ -21,7 +21,7 @@ public class ProblemThree {
 		}
 
 		if (x <= 30) {
-			z = (3 * x) - y;
+			z = (3 * x) - y; // z = (3 * 20) - 5 = 60 - 5 = 55
 			System.out.println("ghi: " + z);
 
 		} else if (x <= 40) {
