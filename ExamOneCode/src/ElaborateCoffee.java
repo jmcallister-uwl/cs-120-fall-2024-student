@@ -23,13 +23,17 @@ public class ElaborateCoffee {
 
 		System.out.println("What extras would you like extras? (Sugar, Cinnamon):");
 		extras = input.nextLine();
+		
+		// Could do this or the below conditional as a valid solution. There are other solutions, these are probably
+		// the most succinct.
+		System.out.println("Your order is a " + size + " " + coffeeBase + " coffee with: \nmilk: " + milk + " \nextras: " + extras);
 
-		if (!milk.isEmpty()) {
-			System.out.println("Your order is a " + size + " " + coffeeBase + " with " + milk + " and " + extras);
-
-		} else {
-			System.out.println("Your order is a " + size + " " + coffeeBase + " with " + extras);
-		}
+//		if (!milk.isEmpty()) {
+//			System.out.println("Your order is a " + size + " " + coffeeBase + " coffee with " + milk + " and " + extras);
+//
+//		} else {
+//			System.out.println("Your order is a " + size + " " + coffeeBase + " coffee with " + extras);
+//		}
 
 		input.close();
 
