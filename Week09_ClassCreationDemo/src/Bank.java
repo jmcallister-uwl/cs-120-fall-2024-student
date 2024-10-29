@@ -58,7 +58,7 @@ public class Bank {
 	
 	public void printAccounts() {
 		for(int i = 0; i < this.accountList.length; i++) {
-			
+			System.out.println(this.accountList[i].getAccountNumber() + " balance: " + this.accountList[i].checkBalance());
 		}
 	}
 }
