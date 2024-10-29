@@ -11,10 +11,12 @@ public class Demo {
 
 		Bank bankOne = new Bank("Altra", 4);
 		
+		
 		System.out.println(bankOne.getName() + " size: " + bankOne.getAccountList().length);
 
 		Bank bankTwo = new Bank("Wells Fargo", accountList);
-
+		
+		
 	}
 
 }

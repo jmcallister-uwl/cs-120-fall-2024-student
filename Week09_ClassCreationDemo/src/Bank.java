@@ -9,6 +9,8 @@ public class Bank {
 		this.accountList = new BankAccount[maxNumAccounts];
 	}
 	
+	
+	
 	public Bank(String bankName, BankAccount[] bankAccounts) {
 		/**
 		 * this.accountList = bankAccounts; 
@@ -16,8 +18,6 @@ public class Bank {
 		this.name = bankName;
 		this.accountList = bankAccounts;
 	}
-	
-	
 	
 	public String getName() {
 		return name;
