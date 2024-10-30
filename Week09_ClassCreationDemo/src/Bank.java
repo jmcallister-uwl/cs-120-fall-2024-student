@@ -30,6 +30,9 @@ public class Bank {
 		return accountList;
 	}
 
+	/**
+	 * Can we use this method elsewhere?
+	 * */
 	public void setAccountList(BankAccount[] accountList) {
 		this.accountList = accountList;
 	}
@@ -38,9 +41,9 @@ public class Bank {
 		return nextOpenIndex;
 	}
 
-	public void setNextOpenIndex(int nextOpenIndex) {
-		this.nextOpenIndex = nextOpenIndex;
-	}
+//	public void setNextOpenIndex(int nextOpenIndex) {
+//		this.nextOpenIndex = nextOpenIndex;
+//	}
 
 	public boolean addAccount(BankAccount account) {
 		return false;
@@ -57,9 +60,7 @@ public class Bank {
 	}
 	
 	public void printAccounts() {
-		for(int i = 0; i < this.accountList.length; i++) {
-			System.out.println(this.accountList[i].getAccountNumber() + " balance: " + this.accountList[i].checkBalance());
-		}
+		
 	}
 }
 
