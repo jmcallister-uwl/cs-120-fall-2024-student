@@ -26,7 +26,7 @@ public class BankAccount {
 	
 	public double withdraw(double amount) {
 		double withdrawnAmount = 0;
-		if(this.balance >= amount && amount > 0) {
+		if(amount > 0 && this.balance >= amount) {
 			this.balance -= amount;
 			withdrawnAmount = amount;			
 		}

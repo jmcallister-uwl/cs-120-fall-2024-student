@@ -5,17 +5,17 @@ public class Demo {
 		BankAccount accountA = new BankAccount("123", 100);
 		BankAccount accountB = new BankAccount("456", 200);
 		
-//		double amount = accountA.withdraw(-20);
+//		double amount = accountA.withdraw(30);
 //		System.out.println(accountA.getAccountNumber() + " balance: " + accountA.checkBalance());
 //		System.out.println("amount: " + amount);
 				
 
-//		Bank bankOne = new Bank("Altra", 4);		
+//		Bank bankOne = new Bank("Altra", 4);
 //		System.out.println(bankOne.getName() + " size: " + bankOne.getAccountList().length);
 		
 		
 		
-		BankAccount[] accountList = { accountA };
+		BankAccount[] accountList = { accountA, accountB };
 		Bank bankTwo = new Bank("Wells Fargo", accountList);
 //		System.out.println("1) Printing Accounts:");
 //		bankTwo.printAccounts();
