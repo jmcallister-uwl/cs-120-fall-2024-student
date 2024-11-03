@@ -7,18 +7,18 @@ public class Bank {
 	public Bank(String bankName, int maxNumAccounts) {
 		this.name = bankName;
 		this.accountList = new BankAccount[maxNumAccounts];
-		
-	}	
-	
+
+	}
+
 	public Bank(String bankName, BankAccount[] bankAccounts) {
 		/**
-		 * this.accountList = bankAccounts; 
-		 * */
+		 * this.accountList = bankAccounts;
+		 */
 		this.name = bankName;
 		this.accountList = bankAccounts;
 		this.nextOpenIndex = this.accountList.length;
-	}		
-	
+	}
+
 	public String getName() {
 		return name;
 	}
@@ -33,7 +33,7 @@ public class Bank {
 
 	/**
 	 * Can we use this method elsewhere?
-	 * */
+	 */
 	public void setAccountList(BankAccount[] accountList) {
 		this.accountList = accountList;
 	}
@@ -51,41 +51,30 @@ public class Bank {
 		// And if the account is not already in the bank.
 		return false;
 	}
-	
+
 	public boolean transfer(BankAccount accTransferFrom, BankAccount accTransferTo, double amount) {
-		
+
 		return false;
 	}
-	
+
 	public boolean accountExists(String accountNumber) {
 		boolean wasFound = false;
-		for(int i = 0; i < this.accountList.length; i++) {
+		for (int i = 0; i < this.accountList.length; i++) {
 			BankAccount curAccount = this.accountList[i];
-			if(curAccount.getAccountNumber().equals(accountNumber)) {
+			if (curAccount.getAccountNumber().equals(accountNumber)) {
 				wasFound = true;
 				break;
 			}
 		}
-		
+
 		return wasFound;
 	}
-	
+
 	public void printAccounts() {
-		for(int i = 0; i < this.accountList.length; i++) {
+		for (int i = 0; i < this.accountList.length; i++) {
 			BankAccount curAccount = this.accountList[i];
-			System.out.println("Account Num " + 
-                    curAccount.getAccountNumber() +
-                    " balance: " + curAccount.checkBalance() 
-        );
+			System.out
+					.println("Account Num " + curAccount.getAccountNumber() + " balance: " + curAccount.checkBalance());
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
