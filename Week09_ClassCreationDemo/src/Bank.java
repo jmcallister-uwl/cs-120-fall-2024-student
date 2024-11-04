@@ -15,7 +15,11 @@ public class Bank {
 		 * this.accountList = bankAccounts;
 		 */
 		this.name = bankName;
-		this.accountList = bankAccounts;		
+//		this.accountList = bankAccounts;
+		this.accountList = new BankAccount[bankAccounts.length];
+		for(int i = 0; i < bankAccounts.length; i++) {
+			this.accountList[i] = bankAccounts[i];
+		}
 		
 		this.nextOpenIndex = this.accountList.length;
 	}
