@@ -15,7 +15,8 @@ public class Bank {
 		 * this.accountList = bankAccounts;
 		 */
 		this.name = bankName;
-		this.accountList = bankAccounts;
+		this.accountList = bankAccounts;		
+		
 		this.nextOpenIndex = this.accountList.length;
 	}
 
@@ -47,9 +48,18 @@ public class Bank {
 //	}
 
 	public boolean addAccount(BankAccount account) {
+		boolean wasAdded = false;
 		// If there is room in the bank.
 		// And if the account is not already in the bank.
-		return false;
+		if(this.nextOpenIndex < this.accountList.length 
+				&& !this.accountExists(account.getAccountNumber())) {
+			// add account
+			this.accountList[this.nextOpenIndex] = account;
+			this.nextOpenIndex++;
+			wasAdded = true;
+		}
+		
+		return wasAdded;
 	}
 
 	public boolean transfer(BankAccount accTransferFrom, BankAccount accTransferTo, double amount) {
@@ -59,7 +69,7 @@ public class Bank {
 
 	public boolean accountExists(String accountNumber) {
 		boolean wasFound = false;
-		for (int i = 0; i < this.accountList.length; i++) {
+		for (int i = 0; i < this.nextOpenIndex; i++) {
 			BankAccount curAccount = this.accountList[i];
 			if (curAccount.getAccountNumber().equals(accountNumber)) {
 				wasFound = true;
@@ -71,8 +81,9 @@ public class Bank {
 	}
 
 	public void printAccounts() {
-		for (int i = 0; i < this.accountList.length; i++) {
-			BankAccount curAccount = this.accountList[i];
+		for (int i = 0; i < this.nextOpenIndex; i++) {
+			BankAccount curAccount = this.accountList[i];			
+			
 			System.out
 					.println("Account Num " + curAccount.getAccountNumber() + " balance: " + curAccount.checkBalance());
 		}
