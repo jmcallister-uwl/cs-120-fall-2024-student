@@ -15,12 +15,11 @@ public class Bank {
 		 * this.accountList = bankAccounts;
 		 */
 		this.name = bankName;
-//		this.accountList = bankAccounts;
+//		this.accountList = bankAccounts;		
 		this.accountList = new BankAccount[bankAccounts.length];
 		for(int i = 0; i < bankAccounts.length; i++) {
 			this.accountList[i] = bankAccounts[i];
 		}
-		
 		this.nextOpenIndex = this.accountList.length;
 	}
 
@@ -47,22 +46,19 @@ public class Bank {
 		return nextOpenIndex;
 	}
 
-//	public void setNextOpenIndex(int nextOpenIndex) {
-//		this.nextOpenIndex = nextOpenIndex;
-//	}
-
 	public boolean addAccount(BankAccount account) {
 		boolean wasAdded = false;
-		// If there is room in the bank.
-		// And if the account is not already in the bank.
-		if(this.nextOpenIndex < this.accountList.length 
+		
+		// If there is room in the bank => DONE
+		// AND if the account is not already in the bank
+		if(this.nextOpenIndex < this.accountList.length
 				&& !this.accountExists(account.getAccountNumber())) {
-			// add account
+			// add the account
 			this.accountList[this.nextOpenIndex] = account;
 			this.nextOpenIndex++;
 			wasAdded = true;
 		}
-		
+				
 		return wasAdded;
 	}
 
@@ -83,13 +79,38 @@ public class Bank {
 
 		return wasFound;
 	}
-
+	
 	public void printAccounts() {
 		for (int i = 0; i < this.nextOpenIndex; i++) {
-			BankAccount curAccount = this.accountList[i];			
+			BankAccount curAccount = this.accountList[i];
 			
 			System.out
 					.println("Account Num " + curAccount.getAccountNumber() + " balance: " + curAccount.checkBalance());
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

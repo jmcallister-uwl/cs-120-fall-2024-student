@@ -21,21 +21,21 @@ public class Demo {
 		 * **************** TESTING BANK CREATION *************
 		 * *******************************************************/
 
-		Bank bankOne = new Bank("Altra", 4);
-		System.out.println(bankOne.getName() + " size: " + bankOne.getAccountList().length);
-		System.out.println("=======================================");
-		System.out.println(bankOne.getName() + " BEFORE adding account:");
-		bankOne.printAccounts();
+//		Bank bankOne = new Bank("Altra", 4);
+//		System.out.println(bankOne.getName() + " size: " + bankOne.getAccountList().length);
+//		System.out.println("=======================================");
+//		System.out.println(bankOne.getName() + " BEFORE adding account:");
+//		bankOne.printAccounts();
 		
 		
 		/*
 		 * ******* TESTING ADDING *SINGLE* ACCOUNT TO BANK ********
 		 * */
 		
-		bankOne.addAccount(accountB);
-		System.out.println("=======================================");
-		System.out.println(bankOne.getName() + " AFTER adding account:");
-		bankOne.printAccounts();
+//		bankOne.addAccount(accountB);
+//		System.out.println("=======================================");
+//		System.out.println(bankOne.getName() + " AFTER adding account:");
+//		bankOne.printAccounts();
 		/*
 		 * *****************************************************
 		 * */
@@ -50,31 +50,35 @@ public class Demo {
 		 * ******* TESTING BANK CREATION & ARRAY MANIPULATION ****
 		 * *******************************************************/
 		
-//		BankAccount[] accountList = { accountA };
-//		Bank bankTwo = new Bank("Wells Fargo", accountList);
-//		
-//		System.out.println("1) Printing " + bankTwo.getName() + " Accounts:");
-//		bankTwo.printAccounts();
+		BankAccount[] accountList = { accountA };
+		Bank bankTwo = new Bank("Wells Fargo", accountList);
+		System.out.println("1) Printing " + bankTwo.getName() + " Accounts:");
+		bankTwo.printAccounts();
+		
+		
+		accountList[0] = accountB;
+		accountList[0].deposit(124);
+		
+		System.out.println("================================");
+		System.out.println("\n2) Printing " + bankTwo.getName() + " Accounts:");
+		bankTwo.printAccounts();
 				
 		/*
 		 * ************* TESTING ACCOUNTEXISTS() **************
 		 * */
 		
+//		System.out.println("\n============== TESTING ACCOUNT EXISTS ==============");
 //		boolean wasFound = bankTwo.accountExists(accountA.getAccountNumber());
 //		System.out.println("account exists: " + wasFound);
 //		bankTwo.printAccounts();
+//		System.out.println("======================================================");
 		
 		/*
 		 * *****************************************************
 		 * */
 		
 		
-//		accountList[0] = accountB;
-//		accountList[0].deposit(124);
-//		
-//		System.out.println("================================");
-//		System.out.println("\n2) Printing " + bankTwo.getName() + " Accounts:");
-//		bankTwo.printAccounts();
+
 		
 		/*********************************************************
 		 * *******************************************************
