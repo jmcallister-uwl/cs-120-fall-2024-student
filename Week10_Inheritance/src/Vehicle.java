@@ -5,7 +5,7 @@ public class Vehicle {
 	protected String manufacturer = "Delta";
 
 	public Vehicle() {
-//		System.out.println("Vehicle constructor");
+		System.out.println("Vehicle constructor");
 	}
 
 	public void drive(int value) {
