@@ -3,13 +3,18 @@ public class Vehicle {
 	protected String name = "Default";
 	protected int modelYear = 2024;
 	protected String manufacturer = "Delta";
-
+	
 	public Vehicle() {
-		System.out.println("Vehicle constructor");
+		
+	}
+
+	public Vehicle(String name) {		
+		this.name = name;
+//		System.out.println("Vehicle constructor: " + this.name);
 	}
 
 	public void drive(int value) {
-		System.out.println("Vehicle is moving");
+		System.out.println("Vehicle is moving at " + value + " mph");
 	}
 
 	public void stop() {
