@@ -5,11 +5,11 @@ public class PolymorphismIntro {
 
 		System.out.println("====================== POLYMORPHISM IDEAS ========================");
 
-		Vehicle tester = new Airplane("United", 38000, 4);
+		Vehicle tester = new Airplane("United", 38000, 4);		
 		
 		tester.drive();
 
-//		System.out.println(tester.getAirline());
+//		tester.engineCheck();
 
 		System.out.println("====================== CHECK INSTANCE TYPE ========================");
 //		 Using instanceof to check type at runtime
@@ -28,16 +28,16 @@ public class PolymorphismIntro {
         System.out.println("====================== CASTING ========================");
         
 		// Can cast to allow us to us the runtime type of Airplane.
-		System.out.println(((Airplane) tester).getAirline());
-
-		// Can cast and place into "container" for more specific Vehicle
-		Airplane testerAsPlane = (Airplane) tester;
-
-		testerAsPlane.deployLandingGear();
-
-		// Notice no compilation errors.
+		((Airplane) tester).engineCheck();
+//
+//		// Can cast and place into "container" for more specific Vehicle
+//		Airplane testerAsPlane = (Airplane) tester;
+//
+//		testerAsPlane.deployLandingGear();
+//
+//		// Notice no compilation errors.
 //		((Boat)tester).anchor();
-
+//
 		tester = new Boat(32, true, "Yacht");
 		((Boat) tester).anchor();
 
