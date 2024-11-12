@@ -52,4 +52,32 @@ public class Boat extends Vehicle {
 	public void setBoatType(String boatType) {
 		this.boatType = boatType;
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		// If we are comparing to itself
+	    if (this == obj) {
+	        return true;
+	    }
+	    
+	    if (!(obj instanceof Boat)) {
+	        return false;
+	    }
+	    
+	    Boat other = (Boat) obj;
+	    
+	    return this.length == other.length;
+	}
+
+	
+	@Override
+	public String toString() {
+	    return "Boat{" +
+	           "length=" + length +
+	           ", inPort=" + inPort +
+	           ", boatType='" + boatType + '\'' +
+	           ", modelYear=" + modelYear +
+	           ", manufacturer='" + manufacturer + '\'' +
+	           '}';
+	}
 }

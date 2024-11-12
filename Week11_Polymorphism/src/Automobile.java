@@ -52,5 +52,33 @@ public class Automobile extends Vehicle {
 	public void setElectric(boolean isElectric) {
 		this.isElectric = isElectric;
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		// If we are comparing to itself
+	    if (this == obj) {
+	        return true;
+	    }
+	    
+	    if (!(obj instanceof Automobile)) {
+	        return false;
+	    }
+	    
+	    Automobile other = (Automobile) obj;
+	    
+	    return this.licensePlate.equals(other.licensePlate);
+	}
+
+	
+	@Override
+	public String toString() {
+	    return "Automobile{" +
+	           "licensePlate='" + licensePlate + '\'' +
+	           ", seatingCapacity=" + seatingCapacity +
+	           ", isElectric=" + isElectric +
+	           ", modelYear=" + modelYear +
+	           ", manufacturer='" + manufacturer + '\'' +
+	           '}';
+	}
 
 }

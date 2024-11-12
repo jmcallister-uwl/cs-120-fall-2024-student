@@ -51,5 +51,33 @@ public class Airplane extends Vehicle {
 	public void setNumEngines(int numEngines) {
 		this.numEngines = numEngines;
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		// If we are comparing to itself
+	    if (this == obj) {
+	        return true;
+	    }
+	    
+	    if (!(obj instanceof Airplane)) {
+	        return false;
+	    }
+	    
+	    Airplane other = (Airplane) obj;
+	    
+	    return this.numEngines == other.numEngines;
+	}
+
+	
+	@Override
+	public String toString() {
+	    return "Airplane{" +
+	           "airline='" + airline + '\'' +
+	           ", maxAltitude=" + maxAltitude +
+	           ", numEngines=" + numEngines +
+	           ", modelYear=" + modelYear + 
+	           ", manufacturer='" + manufacturer + '\'' +
+	           '}';
+	}
 
 }

@@ -26,4 +26,30 @@ public class Vehicle {
 	public void setModelYear(int modelYear) {
 		this.modelYear = modelYear;
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+	    // If we are comparing to itself
+		if (this == obj) {
+	        return true;
+	    }
+		
+	    if (!(obj instanceof Vehicle)) {
+	        return false;
+	    }
+	    
+	    Vehicle other = (Vehicle) obj;
+	    
+	    return this.modelYear == other.modelYear;
+	}
+
+	
+	@Override
+	public String toString() {
+	    return "Vehicle{" +
+	           "name='" + name + '\'' +
+	           ", modelYear=" + modelYear +
+	           ", manufacturer='" + manufacturer + '\'' +
+	           '}';
+	}
 }
