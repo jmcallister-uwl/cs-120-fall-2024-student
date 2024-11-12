@@ -9,7 +9,7 @@ public class PolymorphismIntro {
 
 		tester.drive();
 
-		((Airplane)tester).engineCheck(); // Will throw a compilation error.
+//		tester.engineCheck(); // Will throw a compilation error.
 		
 		System.out.println("====================== CHECK INSTANCE TYPE ========================");
 		 

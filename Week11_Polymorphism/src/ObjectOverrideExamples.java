@@ -6,7 +6,9 @@ public class ObjectOverrideExamples {
 		Airplane airplaneTwo = new Airplane("American Airlines", 38000, 2);
 
 
-		System.out.println(airplaneOne);
+		boolean result = airplaneOne.equals(airplaneTwo);
+		
+		System.out.println("result: " + result);
 
 	}
 
