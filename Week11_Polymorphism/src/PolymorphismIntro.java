@@ -6,11 +6,11 @@ public class PolymorphismIntro {
 		System.out.println("====================== POLYMORPHISM IDEAS ========================");
 
 		Vehicle tester = new Airplane("United", 38000, 4);		
-		
+
 		tester.drive();
 
-//		tester.engineCheck(); // Will throw a compilation error.
-
+		((Airplane)tester).engineCheck(); // Will throw a compilation error.
+		
 		System.out.println("====================== CHECK INSTANCE TYPE ========================");
 		 
         if (tester instanceof Airplane) {

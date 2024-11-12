@@ -72,12 +72,12 @@ public class Boat extends Vehicle {
 	
 	@Override
 	public String toString() {
-	    return "Boat{" +
-	           "length=" + length +
-	           ", inPort=" + inPort +
-	           ", boatType='" + boatType + '\'' +
-	           ", modelYear=" + modelYear +
-	           ", manufacturer='" + manufacturer + '\'' +
-	           '}';
+	    return "Boat {" +
+	           "\n\tlength = " + length + "," +
+	           "\n\tinPort = " + inPort + "," +
+	           "\n\tboatType = '" + boatType + "'," +
+	           "\n\tmodelYear = " + modelYear + "," +
+	           "\n\tmanufacturer = '" + manufacturer + "'" +
+	           "\n}";
 	}
 }

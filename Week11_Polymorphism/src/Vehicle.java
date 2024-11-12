@@ -1,7 +1,7 @@
 public class Vehicle {
 	protected String name = "Default";
 	protected int modelYear = 2024;
-	protected String manufacturer;
+	protected String manufacturer = "Default";
 
 	public void drive() {
 		System.out.println("Vehicle is moving");
@@ -46,10 +46,10 @@ public class Vehicle {
 	
 	@Override
 	public String toString() {
-	    return "Vehicle{" +
-	           "name='" + name + '\'' +
-	           ", modelYear=" + modelYear +
-	           ", manufacturer='" + manufacturer + '\'' +
-	           '}';
+	    return "Vehicle {" +
+	           "\n\tname = '" + name + "'," +
+	           "\n\tmodelYear = " + modelYear + "," +
+	           "\n\tmanufacturer = '" + manufacturer +
+	           "\n}";
 	}
 }

@@ -71,13 +71,13 @@ public class Airplane extends Vehicle {
 	
 	@Override
 	public String toString() {
-	    return "Airplane{" +
-	           "airline='" + airline + '\'' +
-	           ", maxAltitude=" + maxAltitude +
-	           ", numEngines=" + numEngines +
-	           ", modelYear=" + modelYear + 
-	           ", manufacturer='" + manufacturer + '\'' +
-	           '}';
+	    return "Airplane {" +
+	           "\n\tAirline = '" + airline + "'," +
+	           "\n\tmaxAltitude = " + maxAltitude + "," +
+	           "\n\tnumEngines = " + numEngines + "," +
+	           "\n\tmodelYear = " + modelYear + "," +
+	           "\n\tmanufacturer = '" + manufacturer + "'" +
+	           "\n}";
 	}
 
 }

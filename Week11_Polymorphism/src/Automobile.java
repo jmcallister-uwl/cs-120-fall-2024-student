@@ -72,13 +72,13 @@ public class Automobile extends Vehicle {
 	
 	@Override
 	public String toString() {
-	    return "Automobile{" +
-	           "licensePlate='" + licensePlate + '\'' +
-	           ", seatingCapacity=" + seatingCapacity +
-	           ", isElectric=" + isElectric +
-	           ", modelYear=" + modelYear +
-	           ", manufacturer='" + manufacturer + '\'' +
-	           '}';
+	    return "Automobile {" +
+	           "\n\tlicensePlate = '" + licensePlate + "," +
+	           "\n\tseatingCapacity = " + seatingCapacity + "," +
+	           "\n\tisElectric = " + isElectric + "," +
+	           "\n\tmodelYear = " + modelYear + "," +
+	           "\n\tmanufacturer = '" + manufacturer + "'" +
+	           "\n}";
 	}
 
 }
