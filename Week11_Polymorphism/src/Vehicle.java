@@ -3,6 +3,8 @@ public class Vehicle {
 	protected int modelYear = 2024;
 	protected String manufacturer = "Default";
 
+	public Vehicle() {}
+	
 	public void drive() {
 		System.out.println("Vehicle is moving");
 	}
