@@ -10,15 +10,11 @@ public class Vehicle {
 	}
 
 	public Vehicle(String name, int modelYear) {
-		this.name = name;
-		this.manufacturer = "Defualt manufacturer";
-		this.modelYear = modelYear;
+		this(name, "Default Manufacturer", modelYear);
 	}
 
 	public Vehicle(String name) {
-		this.name = name;
-		this.manufacturer = "Default manufacturer";
-		this.modelYear = 2024;
+		this(name, "Default manufacturer", 2024);
 	}
 
 	public void drive() {
