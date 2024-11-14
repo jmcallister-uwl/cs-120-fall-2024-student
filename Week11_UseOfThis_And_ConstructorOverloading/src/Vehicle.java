@@ -2,6 +2,7 @@ public class Vehicle {
 	protected String name;
 	protected String manufacturer;
 	protected int modelYear;
+	
 
 	public Vehicle(String name, String manufacturer, int modelYear) {
 		this.name = name;
@@ -10,11 +11,13 @@ public class Vehicle {
 	}
 
 	public Vehicle(String name, int modelYear) {
-		this(name, "Default Manufacturer", modelYear);
+		this(name, "Default Manufacturer", modelYear );
+
 	}
 
 	public Vehicle(String name) {
-		this(name, "Default manufacturer", 2024);
+		this(name, "Default Manufacturer", 2024);
+
 	}
 
 	public void drive() {
@@ -57,6 +60,7 @@ public class Vehicle {
 		return this.modelYear == other.modelYear;
 	}
 
+	
 	@Override
 	public String toString() {
 		return "Vehicle {" + "\n\tname = '" + name + "'," + "\n\tmodelYear = " + modelYear + ","
