@@ -2,8 +2,6 @@ public class Airplane extends Vehicle {
 	private String airline;
 	protected int numEngines;
 	
-//	Airplane airplaneTwo = new Airplane(2, "United");
-	
 	public Airplane(String name, int modelYear, String airline, int numEngines) {
 		super(name, modelYear);
 		this.airline = airline;		
