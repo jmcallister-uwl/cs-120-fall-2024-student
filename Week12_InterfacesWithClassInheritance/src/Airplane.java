@@ -20,7 +20,7 @@ public class Airplane implements Flyable {
 
 	@Override
 	public void fly() {
-		System.out.println(this.name + " has its jets firing!");
+		System.out.println(this.name + " is flying!");
 
 	}
 
