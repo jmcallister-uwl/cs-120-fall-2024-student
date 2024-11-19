@@ -22,18 +22,18 @@ public class Demo {
 		System.out.println("\n==================================\n");
 				
 		// The index we wish to remove an element from
-		int toRemove = 1;
+		int indexToRemove = 1;
 
 		// Get the String that we are removing out of the array
 		// before setting that index to null
-		String removedWord = words[toRemove];
+		String removedWord = words[indexToRemove];
 
 		// Clear the index we are removing something from
-		words[toRemove] = null;
+		words[indexToRemove] = null;
 
 		// Now shift all the elements so that we do not have a gap
 		// in the array.
-		for(int i = toRemove; i < words.length - 1; i++) {
+		for(int i = indexToRemove; i < words.length - 1; i++) {
 			words[i] = words[i + 1];
 		}
 
