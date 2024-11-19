@@ -8,7 +8,6 @@ public class Jet extends Airplane {
 	@Override
 	public void fly() {
 		System.out.println(this.name + " THE JET has its jets firing!");
-
 	}
 	
 	public void fireJets() {
