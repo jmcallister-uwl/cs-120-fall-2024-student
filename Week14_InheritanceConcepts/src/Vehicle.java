@@ -2,6 +2,10 @@ public class Vehicle {
 	protected String name;
 	protected String manufacturer;
 	protected int modelYear;
+	
+	public Vehicle() {
+		System.out.println("VEHICLE CONSTRUCTOR");
+	}
 
 	public Vehicle(String name, String manufacturer, int modelYear) {
 		this.name = name;
