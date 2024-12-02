@@ -9,7 +9,7 @@ public class BackwardsLogic {
 
 		for(int i = 0; i <= start; i--) {
 		    System.out.println(i);
-//		}
+		}
 
 	}
 
