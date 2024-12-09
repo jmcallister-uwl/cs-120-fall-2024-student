@@ -9,9 +9,9 @@ public class Demo {
 		 * 
 		 * Woo!!!
 		 */
-		String message = "Hello World!" +
-		 "\n\tAlmost the end of the semester!" +
-		"\n\nWoo!!!";
+		String message = "Hello World!\n" + 
+		 "\tAlmost the end of the semester!\n" +
+		 "\nWoo!!";
 		
 		
 		System.out.println(message);
