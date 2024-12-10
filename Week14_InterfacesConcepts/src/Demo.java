@@ -6,7 +6,8 @@ public class Demo {
 		Bird birdOne = new Bird("Tweety");
 
 		Jet airplaneOne = new Jet("Jeff");
-		Airplane airplaneTwo = new PropellerPlane("Peter");			
+		Airplane airplaneTwo = new PropellerPlane("Peter");
+	
 
 		Flyable[] fliers = { testFlyer, birdOne, airplaneOne, airplaneTwo };
 
